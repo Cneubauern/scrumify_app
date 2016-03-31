@@ -3,7 +3,7 @@ machine:
     Europe/Berlin
 
 dependencies:
-  cache directories:
+  cache_directories:
     - ~/.meteor
 
   override:
