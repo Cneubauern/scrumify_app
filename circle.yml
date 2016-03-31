@@ -1,0 +1,18 @@
+machine:
+  timezone:
+    Europe/Berlin
+
+dependencies:
+  cache directories:
+    - ~/.meteor
+
+  override:
+    - curl https://install.meteor.com/ | sh
+
+  post:
+    - meteor npm install
+
+test:
+  override:
+    - meteor test --driver-package practicalmeteor:mocha
+
