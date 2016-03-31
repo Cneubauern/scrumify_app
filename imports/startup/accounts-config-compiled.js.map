@@ -1,0 +1,1 @@
+{"version":3,"sources":["accounts-config.js"],"names":[],"mappings":"AAAA,SAAS,QAAT,QAAyB,sBAAzB;;AAEA,SAAS,EAAT,CAAY,MAAZ,CAAmB;AACf,0BAAsB,eAAtB;CADJ","file":"accounts-config-compiled.js","sourcesContent":["import { Accounts } from 'meteor/accounts-base';\n\nAccounts.ui.config({\n    passwordSignupFields: 'USERNAME_ONLY',\n});"]}
