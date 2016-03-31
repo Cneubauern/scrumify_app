@@ -1,0 +1,12 @@
+.new- input {
+  box-sizing: border-box;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding-right: 80px;
+  font-size: 1em; }
+  .new- input input:focus {
+    outline: 0; }
+
+/*# sourceMappingURL=new-task.css.map */

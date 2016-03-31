@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAQ;EACN,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,IAAI;EAChB,SAAS,EAAE,GAAG;EACd,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,QAAQ",
+"sources": ["delete.scss"],
+"names": [],
+"file": "delete.css"
+}

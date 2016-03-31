@@ -1,0 +1,22 @@
+<template name="Chat">
+
+    <div class="container">
+        <header>
+            <h1>Room Chat</h1>
+            {{> loginButtons}}
+
+            {{#if currentUser}}
+                <form class="new-message">
+                    <input type="text" name="text" placeholder="Type to add message" />
+                </form>
+            {{/if}}
+        </header>
+
+        <ul>
+            {{#each messages}}
+                {{> Message}}
+            {{/each}}
+        </ul>
+    </div>
+
+</template>

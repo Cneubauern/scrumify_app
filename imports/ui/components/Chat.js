@@ -2,35 +2,32 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
-import { Tasks } from '../../api/tasks/tasks.js';
+import { Messages } from '../../api/tasks/Messages.js';
 
-import './task.js';
-import './body.html';
+import './Message.js';
+import './Chat.html';
 
-Template.body.helpers({
-    tasks() {
+Template.Chat.helpers({
+    messages() {
         const instance = Template.instance();
         if (instance.state.get('hideCompleted')) {
             // If hide completed is checked, filter tasks
-            return Tasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
+            return Messages.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
         }
         // Otherwise, return all of the tasks
 
-        return Tasks.find({}, { sort: { createdAt: -1 } });
-    },
-    incompleteCount() {
-        return Tasks.find({ checked: { $ne: true } }).count();
-    },
+        return Messages.find({}, { sort: { createdAt: 1 } });
+    }
 });
 
-Template.body.onCreated(function bodyOnCreated() {
+Template.Chat.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();
-    Meteor.subscribe('tasks');
+    Meteor.subscribe('messages');
 
 });
 
-Template.body.events({
-    'submit .new-task'(event) {
+Template.Chat.events({
+    'submit .new-message'(event) {
         // Prevent default browser form submit
         event.preventDefault();
 
@@ -39,13 +36,9 @@ Template.body.events({
         const text = target.text.value;
 
         // Insert a task into the collection
-        Meteor.call('tasks.insert', text);
+        Meteor.call('messages.insert', text);
 
         // Clear form
         target.text.value = '';
-    },
-
-    'change .hide-completed input'(event, instance) {
-        instance.state.set('hideCompleted', event.target.checked);
     }
 });

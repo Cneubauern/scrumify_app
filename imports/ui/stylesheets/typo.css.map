@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,EAAG;EACD,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,CAAC;EACT,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,YAAY;EACrB,YAAY,EAAE,GAAG",
+"sources": ["typo.scss"],
+"names": [],
+"file": "typo.css"
+}
