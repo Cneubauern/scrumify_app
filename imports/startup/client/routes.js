@@ -11,3 +11,9 @@ FlowRouter.route('/', {
         BlazeLayout.render('App_body', {main: 'Chat'});
     }
 });
+
+FlowRouter.notFound = {
+    action (){
+        BlazeLayout.render('App_body', {main: 'App_notFound'});
+    }
+};
