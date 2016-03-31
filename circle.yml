@@ -8,11 +8,12 @@ dependencies:
 
   override:
     - curl https://install.meteor.com/ | sh
-
-  post:
     - meteor npm install
 
 test:
+  pre:
+    - meteor npm install --save browser
+
   override:
     - meteor test --driver-package practicalmeteor:mocha
 
