@@ -3,6 +3,7 @@ accounts-password@1.1.6
 accounts-ui@1.1.7
 accounts-ui-unstyled@1.1.10
 allow-deny@1.0.2
+arillo:flow-router-helpers@0.5.1
 autoupdate@1.2.6
 babel-compiler@6.5.2
 babel-runtime@0.1.6
@@ -91,3 +92,4 @@ underscore@1.0.6
 url@1.0.7
 webapp@1.2.6
 webapp-hashing@1.0.7
+zimme:active-route@2.3.2
