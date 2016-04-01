@@ -1,0 +1,1 @@
+import './Agb_page.html';

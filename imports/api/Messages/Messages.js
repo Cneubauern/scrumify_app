@@ -6,7 +6,7 @@ export const Messages = new Mongo.Collection('messages');
 
 if (Meteor.isServer) {
     // This code only runs on the server
-    // Only publish tasks that are public or belong to the current user
+    // Only publish Messages that are public or belong to the current user
     Meteor.publish('messages', function tasksPublication() {
         return Messages.find({
             $or: [
@@ -29,7 +29,7 @@ Meteor.methods({
             text,
             createdAt: new Date(),
             owner: Meteor.userId(),
-            username: Meteor.user().username,
+            username: Meteor.user().username
         });
     },
     'messages.remove'(taskId) {

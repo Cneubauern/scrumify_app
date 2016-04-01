@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 
-import { Messages } from '../../api/tasks/Messages.js';
+import { Messages } from '../../api/Messages/Messages.js';
 
 import './Message.html';
 

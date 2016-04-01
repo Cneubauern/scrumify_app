@@ -7,7 +7,7 @@ import { assert } from 'meteor/practicalmeteor:chai';
 import { Tasks } from './Messages.js';
 
 if (Meteor.isServer) {
-    describe('Tasks', () => {
+    describe('Messages', () => {
         describe('methods', () => {
 
             const userId = Random.id();
@@ -19,7 +19,7 @@ if (Meteor.isServer) {
                     text: 'test task',
                     createdAt: new Date(),
                     owner: userId,
-                    username: 'tmeasday',
+                    username: 'tmeasday'
                 });
             });
 
