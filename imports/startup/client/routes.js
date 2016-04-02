@@ -10,20 +10,29 @@ import '/imports/ui/pages/About_page.js';
 import '/imports/ui/pages/Agb_page.js';
 import '/imports/ui/pages/Faq_page.js';
 import '/imports/ui/pages/Impressum_page.js';
+import '/imports/ui/pages/Start_page.js'
 
 FlowRouter.route('/', {
     name: 'Page.home',
     action() {
-        BlazeLayout.render('Page_body', {main: 'Chat'});
+        BlazeLayout.render('Page_body', {main: 'Start_page'});
     }
 });
 
+FlowRouter.route('/room/:id',{
+   name: 'room',
+    action(){
+        BlazeLayout.render('App_body', {main: 'Chat'});
+    }
+});
+
+
+//Static Pages 
 FlowRouter.notFound = {
     action (){
         BlazeLayout.render('Page_body', {main: 'App_notFound'});
     }
 };
-
 
 FlowRouter.route('/about', {
     name: 'Page.about',

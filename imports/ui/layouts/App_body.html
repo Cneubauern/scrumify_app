@@ -2,11 +2,16 @@
 
     {{> App_header}}
 
-        
+        <div class="row">
+            <div class="col-md-9">
+                {{> Template.dynamic template=main}}
 
-    {{> Template.dynamic template=main}}
+            </div>
+            <div class="col-md-3">
+                {{> Template.dynamic template=sidebar}}
 
-    {{> Template.dynamic template=sidebar}}
+            </div>
+        </div>
 
-
+    {{> Page_footer}}
 </template>

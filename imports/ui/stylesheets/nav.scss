@@ -1,0 +1,17 @@
+@import "variables";
+
+nav{
+
+}
+
+.navbar {
+
+  margin: 0;
+  border: none;
+  background-color: $darkColor;
+  .navbar-brand {
+    img {
+      max-height: 100%;
+    }
+  }
+}

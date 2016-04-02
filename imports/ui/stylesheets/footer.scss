@@ -1,0 +1,12 @@
+@import "variables";
+
+footer{
+  display: block;
+  position: fixed;
+  bottom: 0;
+  min-width: 100%;
+
+  #page_footer{
+    background-color: $darkColor;
+  }
+}
