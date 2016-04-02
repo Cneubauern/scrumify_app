@@ -3,6 +3,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 //import { AccountsTemplates } from 'meteor/useraccounts:core';
 
 import '/imports/ui/layouts/App_body.js';
+import '/imports/ui/layouts/Page_body.js';
 import '/imports/ui/components/Chat.js';
 import '/imports/ui/pages/App_notFound.js';
 import '/imports/ui/pages/About_page.js';
@@ -11,40 +12,40 @@ import '/imports/ui/pages/Faq_page.js';
 import '/imports/ui/pages/Impressum_page.js';
 
 FlowRouter.route('/', {
-    name: 'App.home',
+    name: 'Page.home',
     action() {
-        BlazeLayout.render('App_body', {main: 'Chat'});
+        BlazeLayout.render('Page_body', {main: 'Chat'});
     }
 });
 
 FlowRouter.notFound = {
     action (){
-        BlazeLayout.render('App_body', {main: 'App_notFound'});
+        BlazeLayout.render('Page_body', {main: 'App_notFound'});
     }
 };
 
 
 FlowRouter.route('/about', {
-    name: 'App.about',
+    name: 'Page.about',
     action() {
-        BlazeLayout.render('App_body', {main: 'About_page'});
+        BlazeLayout.render('Page_body', {main: 'About_page'});
     }
 });
 FlowRouter.route('/agb', {
-    name: 'App.agb',
+    name: 'Page.agb',
     action() {
-        BlazeLayout.render('App_body', {main: 'Agb_page'});
+        BlazeLayout.render('Page_body', {main: 'Agb_page'});
     }
 });
 FlowRouter.route('/faq', {
-    name: 'App.faq',
+    name: 'Page.faq',
     action() {
-        BlazeLayout.render('App_body', {main: 'Faq_page'});
+        BlazeLayout.render('Page_body', {main: 'Faq_page'});
     }
 });
 FlowRouter.route('/impressum', {
-    name: 'App.impressum',
+    name: 'Page.impressum',
     action() {
-        BlazeLayout.render('App_body', {main: 'Impressum_page'});
+        BlazeLayout.render('Page_body', {main: 'Impressum_page'});
     }
 });

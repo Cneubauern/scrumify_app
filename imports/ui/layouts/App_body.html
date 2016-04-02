@@ -1,21 +1,12 @@
 <template name="App_body">
 
+    {{> App_header}}
+
+        
+
     {{> Template.dynamic template=main}}
 
-    <footer>
-        
-        {{#linkTo '/about/'}}
-            About
-        {{/linkTo}}
-        {{#linkTo '/faq/'}}
-            FAQ
-        {{/linkTo}}
-        {{#linkTo '/agb/'}}
-            AGB
-        {{/linkTo}}
-        {{#linkTo '/impressum/'}}
-            Impressum
-        {{/linkTo}}
+    {{> Template.dynamic template=sidebar}}
 
-    </footer>
+
 </template>
