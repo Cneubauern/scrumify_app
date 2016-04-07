@@ -10,7 +10,9 @@ import '/imports/ui/pages/About_page.js';
 import '/imports/ui/pages/Agb_page.js';
 import '/imports/ui/pages/Faq_page.js';
 import '/imports/ui/pages/Impressum_page.js';
-import '/imports/ui/pages/Start_page.js'
+import '/imports/ui/pages/Start_page.js';
+import '/imports/ui/pages/Create_page.js';
+import '/imports/ui/pages/Search_page.js';
 
 FlowRouter.route('/', {
     name: 'Page.home',
@@ -19,13 +21,18 @@ FlowRouter.route('/', {
     }
 });
 
-FlowRouter.route('/room/:id',{
-   name: 'room',
-    action(){
-        BlazeLayout.render('App_body', {main: 'Chat'});
+FlowRouter.route('/search', {
+    name: 'Page.search',
+    action() {
+        BlazeLayout.render('Page_body', {main: 'Search_page'});
     }
 });
-
+FlowRouter.route('/create', {
+    name: 'Page.create',
+    action() {
+        BlazeLayout.render('Page_body', {main: 'Create_page'});
+    }
+});
 
 //Static Pages 
 FlowRouter.notFound = {

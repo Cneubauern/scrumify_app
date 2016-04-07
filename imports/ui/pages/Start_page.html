@@ -1,15 +1,29 @@
-<template name="Start_page">
+<template name="Start_page" xmlns="http://www.w3.org/1999/html">
 
     <div class="container">
-        <header>
-            <h1>
-                Start
-            </h1>
-        </header>
-
         <section>
+            <header class="text-center">
+                <img alt="Brand" src="./images/scrumify-Logo.png">
+            </header>
 
-            <a class="btn btn-default" href="{{pathFor 'room' id=1}}"></a>
+            <article class="text-center">
+                <h1>
+                    Willkommen auf Scrumify
+                </h1>
+                <h2>
+                    Deiner Sprint Planning App
+                </h2>
+            </article>
+
+            <article class="text-center">
+
+                <h3> Logge dich ein Um ein neues Sprint Planning zu starten</h3>
+                <a class="btn btn-default" href="{{pathFor 'Page.create'}}">Start</a>
+
+                <h3>oder finde ein laufendes Sprint Planning</h3>
+                <a class="btn btn-default" href="{{pathFor 'Page.search'}}">Suche</a>
+
+            </article>
         </section>
 
     </div>
